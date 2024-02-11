@@ -5,14 +5,14 @@ $('document').ready(function() {
             $(this).addClass('btn-secondary');
             $(this).children('i').removeClass('bi-heart');
             $(this).children('i').addClass('bi-heart-fill');
-            $(this).children('span').html('Bookmarked');
+            $(this).children('span').html('Difavoritkan');
         }
         else {
             $(this).removeClass('btn-secondary');
             $(this).addClass('btn-warning');
             $(this).children('i').removeClass('bi-heart-fill');
             $(this).children('i').addClass('bi-heart');
-            $(this).children('span').html('Bookmark');
+            $(this).children('span').html('Favorit');
         }
     });
 });
