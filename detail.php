@@ -41,7 +41,10 @@
                 <p><i class="bi bi-calendar"></i> <?php echo($tanggalMulai." - ".$tanggalSelesai) ?></p>
                 <p><i class="bi bi-geo-alt"></i> <?php echo($event['tempat']) ?></p>
                 <p><i class="bi bi-link-45deg"></i> <a href="<?php echo($event['medsos']) ?>"><?php echo($event['medsos']) ?></a></p>
-                <button class="btn btn-warning button-bookmark"><i class="bi bi-heart"></i> <span>Favorit</span></button>
+                <button class="btn btn-warning" id="btn-bookmark"><i class="bi bi-heart"></i> <span>Favorit</span></button>
+                <?php if($_SESSION['logged_in']) : ?>
+                    <button class="btn btn-success"><i class="bi bi-pencil"></i> <span>Edit</span></button>
+                <?php endif ?>
                 <h5>Deskripsi</h5>
                 <p><?php echo($event['deskripsi']) ?></p>
             </div>
