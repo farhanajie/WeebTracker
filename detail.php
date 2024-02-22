@@ -45,7 +45,7 @@
                 <?php if($_SESSION['logged_in']) : ?>
                     <button class="btn btn-success"><i class="bi bi-pencil"></i> <span>Edit</span></button>
                 <?php endif ?>
-                <h5>Deskripsi</h5>
+                <h5 class="deskripsi">Deskripsi</h5>
                 <p><?php echo($event['deskripsi']) ?></p>
             </div>
         </div>
