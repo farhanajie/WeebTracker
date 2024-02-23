@@ -17,16 +17,13 @@
     <div class="container">
 
         <?php
-        $query = mysqli_query(
-            $koneksi,
-            "SELECT * FROM event ORDER BY tanggal_mulai DESC"
-        );
+        $query = mysqli_query($koneksi, "SELECT * FROM event ORDER BY tanggal_mulai DESC");
 
         foreach ($query as $event) :
             $tanggalMulai = strtotime($event['tanggal_mulai']);
-            $tanggalMulai = date('m/d/Y', $tanggalMulai);
+            $tanggalMulai = date('d/m/Y', $tanggalMulai);
             $tanggalSelesai = strtotime($event['tanggal_selesai']);
-            $tanggalSelesai = date('m/d/Y', $tanggalSelesai);
+            $tanggalSelesai = date('d/m/Y', $tanggalSelesai);
         ?>
         
         <div class="card col-md-4 rounded shadow">
@@ -45,7 +42,6 @@
 
         <?php endforeach ?>
     </div>
-    <?php include_once('components/tambahEvent.php') ?>
 </body>
 
 </html>

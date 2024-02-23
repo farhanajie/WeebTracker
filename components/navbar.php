@@ -6,7 +6,7 @@
         <div>
             <ul class="navbar-nav mb-0 d-flex">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-heart-fill"></i></a>
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-bookmark"><i class="bi bi-heart-fill"></i></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="bi bi-bell-fill"></i></a>
@@ -23,3 +23,6 @@
         </div>
     </div>
 </nav>
+
+<?php include_once('components/tambahEvent.php') ?>
+<?php include_once('components/bookmark.php') ?>
