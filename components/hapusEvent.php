@@ -10,7 +10,7 @@
             </div>
             <div class="modal-footer">
                 <form action="backend/admin/hapusEventBackend.php" method="post">
-                    <input type="number" id="id_event" name="id_event" value="<?php echo $id ?>" hidden>
+                    <input type="number" id="id_event" name="id_event" value="<?php echo $id_event ?>" hidden>
                     <button class="btn btn-danger" name="hapus_event" type="submit">Ya</button>
                 </form>
                 <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Tidak</button>
