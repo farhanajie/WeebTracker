@@ -28,6 +28,8 @@
         $tanggalMulai = date('d/m/Y', $tanggalMulai);
         $tanggalSelesai = strtotime($event['tanggal_selesai']);
         $tanggalSelesai = date('d/m/Y', $tanggalSelesai);
+
+        $bkArray = json_decode($_COOKIE['bookmark']);
         ?>
         
         <div class="row">
@@ -41,7 +43,11 @@
                 <p><i class="bi bi-calendar"></i> <?php echo($tanggalMulai." - ".$tanggalSelesai) ?></p>
                 <p><i class="bi bi-geo-alt"></i> <?php echo($event['tempat']) ?></p>
                 <p><i class="bi bi-link-45deg"></i> <a href="<?php echo($event['medsos']) ?>"><?php echo($event['medsos']) ?></a></p>
-                <button class="btn btn-warning" id="btn-bookmark"><i class="bi bi-heart"></i> <span>Favorit</span></button>
+                <?php if(!in_array($id_event, $bkArray)) : ?>
+                    <button class="btn btn-warning" id="btn-bookmark"><i class="bi bi-heart"></i> <span>Favorit</span></button>
+                <?php else : ?>
+                    <button class="btn btn-secondary" id="btn-bookmark"><i class="bi bi-heart-fill"></i> <span>Difavoritkan</span></button>
+                <?php endif ?>
                 <?php if($_SESSION['logged_in']) : ?>
                     <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-edit-event"><i class="bi bi-pencil"></i> <span>Edit</span></button>
                     <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-hapus-event"><i class="bi bi-trash"></i> <span>Hapus</span></button>

@@ -8,6 +8,9 @@
 <!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+<!-- JS Cookie -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+
 <!-- Main -->
 <link rel="stylesheet" href="assets/css/style.css">
 <script src="assets/js/scripts.js"></script>
