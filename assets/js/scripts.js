@@ -7,7 +7,7 @@ $('document').ready(function() {
             $(this).children('i').addClass('bi-heart-fill');
             $(this).children('span').html('Difavoritkan');
             addToBookmark($.urlParam('id_event'));
-            // alert(Cookies.get('bookmark'));
+            location.reload();
         }
         else {
             $(this).removeClass('btn-secondary');
@@ -16,7 +16,7 @@ $('document').ready(function() {
             $(this).children('i').addClass('bi-heart');
             $(this).children('span').html('Favorit');
             deleteFromBookmark($.urlParam('id_event'));
-            // alert(Cookies.get('bookmark'));
+            location.reload();
         }
     });
     
