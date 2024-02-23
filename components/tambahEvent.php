@@ -33,7 +33,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="deskripsi" class="form-label">Deskripsi</label>
-                        <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3"></textarea>
+                        <textarea class="form-control" id="deskripsi" name="deskripsi" rows="6"></textarea>
                     </div>
                     <button type="submit" class="btn btn-warning">Tambah</button>
                 </form>

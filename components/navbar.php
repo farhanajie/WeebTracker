@@ -13,7 +13,7 @@
                 </li>
                 <?php if ($_SESSION['logged_in']) : ?>
                     <li class="nav-item">
-                        <button class="btn btn-primary" id="tambah-event-button" data-bs-toggle="modal" data-bs-target="#modal-tambah-event">Tambah Event</button>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-tambah-event">Tambah Event</button>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-danger" href="backend/admin/logoutBackend.php">Logout</a>

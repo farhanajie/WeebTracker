@@ -22,12 +22,12 @@
             $koneksi,
             "SELECT * FROM event WHERE id_event = '$id_event'"
         );
-        if ($query) $event = mysqli_fetch_assoc($query);
+        $event = mysqli_fetch_assoc($query);
 
         $tanggalMulai = strtotime($event['tanggal_mulai']);
-        $tanggalMulai = date('m/d/Y', $tanggalMulai);
+        $tanggalMulai = date('d/m/Y', $tanggalMulai);
         $tanggalSelesai = strtotime($event['tanggal_selesai']);
-        $tanggalSelesai = date('m/d/Y', $tanggalSelesai);
+        $tanggalSelesai = date('d/m/Y', $tanggalSelesai);
         ?>
         
         <div class="row">
@@ -43,7 +43,8 @@
                 <p><i class="bi bi-link-45deg"></i> <a href="<?php echo($event['medsos']) ?>"><?php echo($event['medsos']) ?></a></p>
                 <button class="btn btn-warning" id="btn-bookmark"><i class="bi bi-heart"></i> <span>Favorit</span></button>
                 <?php if($_SESSION['logged_in']) : ?>
-                    <button class="btn btn-success"><i class="bi bi-pencil"></i> <span>Edit</span></button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-edit-event"><i class="bi bi-pencil"></i> <span>Edit</span></button>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-hapus-event"><i class="bi bi-trash"></i> <span>Hapus</span></button>
                 <?php endif ?>
                 <h5 class="deskripsi">Deskripsi</h5>
                 <p><?php echo($event['deskripsi']) ?></p>
@@ -52,6 +53,8 @@
 
     </div>
     <?php include_once('components/tambahEvent.php') ?>
+    <?php include_once('components/editEvent.php') ?>
+    <?php include_once('components/hapusEvent.php') ?>
 </body>
 
 </html>
